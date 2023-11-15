@@ -7,8 +7,8 @@
 
 import Foundation
 
-class UserListViewModel {
-    private var userArray = [User]()
+class UserListViewModel : ObservableObject {
+    @Published var userArray = [User]()
     
     func connectToDatabase() {
         _ = SQLiteDatabase.sharedInstance

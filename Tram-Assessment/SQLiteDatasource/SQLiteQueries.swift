@@ -105,4 +105,21 @@ class SQLiteQueries {
         return userArray
     }
     
+    
+    
+    // Delete
+    static func deleteRow(userId: Int) {
+        guard let database = SQLiteDatabase.sharedInstance.database else {
+            print("Datastore connection error.")
+            return
+        }
+        
+        do {
+            let user = table.filter(id == userId).limit(1)
+            try database.run(user.delete())
+        } catch {
+            print("Deletion error: \(error)")
+        }
+    }
+    
 }

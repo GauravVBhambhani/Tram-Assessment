@@ -12,7 +12,8 @@ struct Tram_AssessmentApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            NewUserView()
+//            NewUserView()
+            UserListView()
         }
     }
     
