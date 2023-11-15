@@ -11,6 +11,14 @@
 		107B7B072B0518D700F44FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B062B0518D700F44FC7 /* ContentView.swift */; };
 		107B7B092B0518D900F44FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107B7B082B0518D900F44FC7 /* Assets.xcassets */; };
 		107B7B0C2B0518D900F44FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107B7B0B2B0518D900F44FC7 /* Preview Assets.xcassets */; };
+		107B7B132B0520F400F44FC7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B122B0520F400F44FC7 /* User.swift */; };
+		107B7B172B05227C00F44FC7 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B162B05227C00F44FC7 /* SQLiteDatabase.swift */; };
+		107B7B192B05249D00F44FC7 /* SQLiteQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B182B05249D00F44FC7 /* SQLiteQueries.swift */; };
+		107B7B1C2B052BD900F44FC7 /* NewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B1B2B052BD900F44FC7 /* NewUserViewModel.swift */; };
+		107B7B1F2B052DE500F44FC7 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B1E2B052DE500F44FC7 /* NewUserView.swift */; };
+		107B7B212B05442000F44FC7 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B202B05442000F44FC7 /* UserListView.swift */; };
+		107B7B232B0552B600F44FC7 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B222B0552B600F44FC7 /* UserListViewModel.swift */; };
+		9F78128B71CB1E3DEA775C88 /* Pods_Tram_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CC4B7CB9E8DE26C5C258A1 /* Pods_Tram_Assessment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,16 @@
 		107B7B062B0518D700F44FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		107B7B082B0518D900F44FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		107B7B0B2B0518D900F44FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		107B7B122B0520F400F44FC7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		107B7B162B05227C00F44FC7 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		107B7B182B05249D00F44FC7 /* SQLiteQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteQueries.swift; sourceTree = "<group>"; };
+		107B7B1B2B052BD900F44FC7 /* NewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewModel.swift; sourceTree = "<group>"; };
+		107B7B1E2B052DE500F44FC7 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
+		107B7B202B05442000F44FC7 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		107B7B222B0552B600F44FC7 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		2FB45C84BAA2D95B6AEF519E /* Pods-Tram-Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram-Assessment.release.xcconfig"; path = "Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment.release.xcconfig"; sourceTree = "<group>"; };
+		97CC4B7CB9E8DE26C5C258A1 /* Pods_Tram_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tram_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0227DD25259C22A480F4065 /* Pods-Tram-Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram-Assessment.debug.xcconfig"; path = "Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F78128B71CB1E3DEA775C88 /* Pods_Tram_Assessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +56,8 @@
 			children = (
 				107B7B032B0518D700F44FC7 /* Tram-Assessment */,
 				107B7B022B0518D700F44FC7 /* Products */,
+				DA6423CA7CE9FCFB699340EF /* Pods */,
+				D90C07DDAECD5135FA09E5C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +72,10 @@
 		107B7B032B0518D700F44FC7 /* Tram-Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				107B7B142B05210B00F44FC7 /* Model */,
+				107B7B1D2B052DCC00F44FC7 /* View */,
+				107B7B1A2B052BC900F44FC7 /* ViewModel */,
+				107B7B152B05223F00F44FC7 /* SQLiteDatasource */,
 				107B7B042B0518D700F44FC7 /* Tram_AssessmentApp.swift */,
 				107B7B062B0518D700F44FC7 /* ContentView.swift */,
 				107B7B082B0518D900F44FC7 /* Assets.xcassets */,
@@ -67,6 +92,58 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		107B7B142B05210B00F44FC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				107B7B122B0520F400F44FC7 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		107B7B152B05223F00F44FC7 /* SQLiteDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				107B7B162B05227C00F44FC7 /* SQLiteDatabase.swift */,
+				107B7B182B05249D00F44FC7 /* SQLiteQueries.swift */,
+			);
+			path = SQLiteDatasource;
+			sourceTree = "<group>";
+		};
+		107B7B1A2B052BC900F44FC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				107B7B1B2B052BD900F44FC7 /* NewUserViewModel.swift */,
+				107B7B222B0552B600F44FC7 /* UserListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		107B7B1D2B052DCC00F44FC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				107B7B1E2B052DE500F44FC7 /* NewUserView.swift */,
+				107B7B202B05442000F44FC7 /* UserListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D90C07DDAECD5135FA09E5C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97CC4B7CB9E8DE26C5C258A1 /* Pods_Tram_Assessment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA6423CA7CE9FCFB699340EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0227DD25259C22A480F4065 /* Pods-Tram-Assessment.debug.xcconfig */,
+				2FB45C84BAA2D95B6AEF519E /* Pods-Tram-Assessment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 107B7B0F2B0518D900F44FC7 /* Build configuration list for PBXNativeTarget "Tram-Assessment" */;
 			buildPhases = (
+				D3C603B6344F237859F1B873 /* [CP] Check Pods Manifest.lock */,
 				107B7AFD2B0518D700F44FC7 /* Sources */,
 				107B7AFE2B0518D700F44FC7 /* Frameworks */,
 				107B7AFF2B0518D700F44FC7 /* Resources */,
+				DB0547F52D26F4B63576D1B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +211,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3C603B6344F237859F1B873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tram-Assessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0547F52D26F4B63576D1B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		107B7AFD2B0518D700F44FC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				107B7B072B0518D700F44FC7 /* ContentView.swift in Sources */,
+				107B7B1F2B052DE500F44FC7 /* NewUserView.swift in Sources */,
 				107B7B052B0518D700F44FC7 /* Tram_AssessmentApp.swift in Sources */,
+				107B7B212B05442000F44FC7 /* UserListView.swift in Sources */,
+				107B7B232B0552B600F44FC7 /* UserListViewModel.swift in Sources */,
+				107B7B1C2B052BD900F44FC7 /* NewUserViewModel.swift in Sources */,
+				107B7B172B05227C00F44FC7 /* SQLiteDatabase.swift in Sources */,
+				107B7B132B0520F400F44FC7 /* User.swift in Sources */,
+				107B7B192B05249D00F44FC7 /* SQLiteQueries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +310,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -245,7 +373,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -266,6 +394,7 @@
 		};
 		107B7B102B0518D900F44FC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0227DD25259C22A480F4065 /* Pods-Tram-Assessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -278,8 +407,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,14 +416,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gaurav.Tram-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		107B7B112B0518D900F44FC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB45C84BAA2D95B6AEF519E /* Pods-Tram-Assessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,8 +440,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +449,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gaurav.Tram-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

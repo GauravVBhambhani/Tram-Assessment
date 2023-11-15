@@ -11,7 +11,12 @@ import SwiftUI
 struct Tram_AssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            NewUserView()
         }
     }
+    
+//    init() {
+//        print(URL.applicationSupportDirectory.path(percentEncoded: false))
+//    }
 }
