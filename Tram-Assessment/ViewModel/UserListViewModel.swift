@@ -18,10 +18,16 @@ class UserListViewModel : ObservableObject {
         userArray = SQLiteQueries.presentRows() ?? []
     }
     
-//    func numberOfRowsInSection (section: Int) -> Int {
-//        if userArray.count != 0 {
-//            return userArray.count
-//        }
-//        return 0
-//    }
+    func updateUserDetails(user: User) {
+        if let index = userArray.firstIndex(where: { $0.id == user.id }) {
+            // Update the user in the array
+            userArray[index] = user
+        }
+    }
+    //    func numberOfRowsInSection (section: Int) -> Int {
+    //        if userArray.count != 0 {
+    //            return userArray.count
+    //        }
+    //        return 0
+    //    }
 }

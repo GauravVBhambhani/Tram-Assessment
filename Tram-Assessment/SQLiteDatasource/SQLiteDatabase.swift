@@ -21,7 +21,7 @@ class SQLiteDatabase {
             
             database = try Connection(fileUrl.path)
             
-        } 
+        }
         
         catch {
             print("Creating connection to database error: \(error)")

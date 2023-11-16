@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		107B7B052B0518D700F44FC7 /* Tram_AssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B042B0518D700F44FC7 /* Tram_AssessmentApp.swift */; };
-		107B7B072B0518D700F44FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B062B0518D700F44FC7 /* ContentView.swift */; };
 		107B7B092B0518D900F44FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107B7B082B0518D900F44FC7 /* Assets.xcassets */; };
 		107B7B0C2B0518D900F44FC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107B7B0B2B0518D900F44FC7 /* Preview Assets.xcassets */; };
 		107B7B132B0520F400F44FC7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B122B0520F400F44FC7 /* User.swift */; };
@@ -18,13 +17,15 @@
 		107B7B1F2B052DE500F44FC7 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B1E2B052DE500F44FC7 /* NewUserView.swift */; };
 		107B7B212B05442000F44FC7 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B202B05442000F44FC7 /* UserListView.swift */; };
 		107B7B232B0552B600F44FC7 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B222B0552B600F44FC7 /* UserListViewModel.swift */; };
+		107B7B252B058B2300F44FC7 /* UpdateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B242B058B2300F44FC7 /* UpdateUserView.swift */; };
+		107B7B272B058C9E00F44FC7 /* UpdateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B7B262B058C9E00F44FC7 /* UpdateUserViewModel.swift */; };
+		107B7B292B05DAAD00F44FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107B7B282B05DAAD00F44FC7 /* LaunchScreen.storyboard */; };
 		9F78128B71CB1E3DEA775C88 /* Pods_Tram_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CC4B7CB9E8DE26C5C258A1 /* Pods_Tram_Assessment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		107B7B012B0518D700F44FC7 /* Tram-Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tram-Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		107B7B042B0518D700F44FC7 /* Tram_AssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tram_AssessmentApp.swift; sourceTree = "<group>"; };
-		107B7B062B0518D700F44FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		107B7B082B0518D900F44FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		107B7B0B2B0518D900F44FC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		107B7B122B0520F400F44FC7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		107B7B1E2B052DE500F44FC7 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		107B7B202B05442000F44FC7 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		107B7B222B0552B600F44FC7 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		107B7B242B058B2300F44FC7 /* UpdateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserView.swift; sourceTree = "<group>"; };
+		107B7B262B058C9E00F44FC7 /* UpdateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModel.swift; sourceTree = "<group>"; };
+		107B7B282B05DAAD00F44FC7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FB45C84BAA2D95B6AEF519E /* Pods-Tram-Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram-Assessment.release.xcconfig"; path = "Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment.release.xcconfig"; sourceTree = "<group>"; };
 		97CC4B7CB9E8DE26C5C258A1 /* Pods_Tram_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tram_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0227DD25259C22A480F4065 /* Pods-Tram-Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram-Assessment.debug.xcconfig"; path = "Target Support Files/Pods-Tram-Assessment/Pods-Tram-Assessment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		107B7AF82B0518D700F44FC7 = {
 			isa = PBXGroup;
 			children = (
+				107B7B282B05DAAD00F44FC7 /* LaunchScreen.storyboard */,
 				107B7B032B0518D700F44FC7 /* Tram-Assessment */,
 				107B7B022B0518D700F44FC7 /* Products */,
 				DA6423CA7CE9FCFB699340EF /* Pods */,
@@ -72,14 +77,13 @@
 		107B7B032B0518D700F44FC7 /* Tram-Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				107B7B042B0518D700F44FC7 /* Tram_AssessmentApp.swift */,
+				107B7B082B0518D900F44FC7 /* Assets.xcassets */,
+				107B7B0A2B0518D900F44FC7 /* Preview Content */,
 				107B7B142B05210B00F44FC7 /* Model */,
 				107B7B1D2B052DCC00F44FC7 /* View */,
 				107B7B1A2B052BC900F44FC7 /* ViewModel */,
 				107B7B152B05223F00F44FC7 /* SQLiteDatasource */,
-				107B7B042B0518D700F44FC7 /* Tram_AssessmentApp.swift */,
-				107B7B062B0518D700F44FC7 /* ContentView.swift */,
-				107B7B082B0518D900F44FC7 /* Assets.xcassets */,
-				107B7B0A2B0518D900F44FC7 /* Preview Content */,
 			);
 			path = "Tram-Assessment";
 			sourceTree = "<group>";
@@ -114,6 +118,7 @@
 			children = (
 				107B7B1B2B052BD900F44FC7 /* NewUserViewModel.swift */,
 				107B7B222B0552B600F44FC7 /* UserListViewModel.swift */,
+				107B7B262B058C9E00F44FC7 /* UpdateUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				107B7B1E2B052DE500F44FC7 /* NewUserView.swift */,
 				107B7B202B05442000F44FC7 /* UserListView.swift */,
+				107B7B242B058B2300F44FC7 /* UpdateUserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107B7B292B05DAAD00F44FC7 /* LaunchScreen.storyboard in Resources */,
 				107B7B0C2B0518D900F44FC7 /* Preview Assets.xcassets in Resources */,
 				107B7B092B0518D900F44FC7 /* Assets.xcassets in Resources */,
 			);
@@ -258,13 +265,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				107B7B072B0518D700F44FC7 /* ContentView.swift in Sources */,
 				107B7B1F2B052DE500F44FC7 /* NewUserView.swift in Sources */,
 				107B7B052B0518D700F44FC7 /* Tram_AssessmentApp.swift in Sources */,
 				107B7B212B05442000F44FC7 /* UserListView.swift in Sources */,
 				107B7B232B0552B600F44FC7 /* UserListViewModel.swift in Sources */,
 				107B7B1C2B052BD900F44FC7 /* NewUserViewModel.swift in Sources */,
+				107B7B252B058B2300F44FC7 /* UpdateUserView.swift in Sources */,
 				107B7B172B05227C00F44FC7 /* SQLiteDatabase.swift in Sources */,
+				107B7B272B058C9E00F44FC7 /* UpdateUserViewModel.swift in Sources */,
 				107B7B132B0520F400F44FC7 /* User.swift in Sources */,
 				107B7B192B05249D00F44FC7 /* SQLiteQueries.swift in Sources */,
 			);

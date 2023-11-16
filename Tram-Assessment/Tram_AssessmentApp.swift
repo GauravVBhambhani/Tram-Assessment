@@ -11,13 +11,13 @@ import SwiftUI
 struct Tram_AssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//            NewUserView()
             UserListView()
         }
     }
     
-//    init() {
-//        print(URL.applicationSupportDirectory.path(percentEncoded: false))
-//    }
+        init() {
+            if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                print("Path to SQLite file: \(documentsDirectory.path)")
+            }
+        }
 }

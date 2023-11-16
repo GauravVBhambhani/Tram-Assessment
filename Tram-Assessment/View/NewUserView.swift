@@ -20,14 +20,20 @@ struct NewUserView: View {
     @State private var email: String = ""
     @State private var phone: String = ""
     
+    // For alert notifications
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var viewModel: NewUserViewModel!
     
     var body: some View {
         
         NavigationStack {
             ZStack {
-                //            Color.gray
+                //                Color.black
                 //                .ignoresSafeArea()
+                
                 VStack {
                     Spacer()
                     VStack {
@@ -40,6 +46,7 @@ struct NewUserView: View {
                         }
                         Text("Edit")
                     }
+                    
                     
                     Spacer()
                     
@@ -104,9 +111,8 @@ struct NewUserView: View {
                         let photo = photo
                         guard let picture = photo?.pngData() else {return}
                         
-                        
                         let userValues = User(id: id, picture: picture, firstName: firstName, lastName: lastName, email: email, phone: phone)
-//                        dismiss()
+                        //                        dismiss()
                         
                         createNewUser(userValues)
                         
@@ -115,15 +121,13 @@ struct NewUserView: View {
                     .disabled(email.isEmpty || phone.isEmpty || firstName.isEmpty || lastName.isEmpty)
                     .frame(maxWidth: 360, maxHeight: 50)
                     // need to make button size responsive
-                    .background(.black)
+                    .background(LinearGradient(gradient: Gradient(colors: [.blue , .purple]), startPoint: .leading, endPoint: .trailing))
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .cornerRadius(50)
                     .padding(.top)
                     
                     Spacer()
-                    
-                    
                 }
                 // convert data of photospickeritem into uiimage
                 .onChange(of: photosPickerItem) { _, _ in
@@ -137,15 +141,17 @@ struct NewUserView: View {
                         }
                     }
                 }
-                
             }
+            
             .navigationTitle("New User")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 createTable()
             }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
-        
     }
     
     
@@ -158,9 +164,15 @@ struct NewUserView: View {
         let userAddedToTable = SQLiteQueries.insertRow(userValues)
         
         if userAddedToTable == true {
+//            alertTitle = "Success"
+//            alertMessage = "User added to SQLite successfully!"
+//            showAlert = true
             dismiss()
         } else {
-            print("Error: user already exists")
+            // print("Error: user already exists")
+            alertTitle = "Error"
+            alertMessage = "User already exists"
+            showAlert = true
         }
     }
 }

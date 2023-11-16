@@ -8,10 +8,11 @@
 import Foundation
 
 struct User: Identifiable {
-    let id: Int
-    let picture: Data
-    let firstName: String
-    let lastName: String
-    let email: String
-    let phone: String
+    var id: Int
+    var picture: Data
+    var firstName: String
+    var lastName: String
+    var email: String
+    var phone: String
 }
+

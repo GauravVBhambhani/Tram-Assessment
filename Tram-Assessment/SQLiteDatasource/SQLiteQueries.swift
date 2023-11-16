@@ -67,7 +67,6 @@ class SQLiteQueries {
         }
     }
     
-    
     // present rows
     static func presentRows() -> [User]? {
         guard let database = SQLiteDatabase.sharedInstance.database else {
@@ -105,6 +104,39 @@ class SQLiteQueries {
         return userArray
     }
     
+    
+    // Update
+    static func updateUser(_ user: User) -> Bool {
+        guard let database = SQLiteDatabase.sharedInstance.database else {
+            print("Datastore connection error.")
+            return false
+        }
+        
+        let updatedUser = table.filter(id == user.id).limit(1)
+        
+        do {
+            if try database.run(updatedUser.update(
+                firstName <- user.firstName,
+                lastName <- user.lastName,
+                email <- user.email,
+                phone <- user.phone,
+                picture <- user.picture
+            )) > 0 {
+                print("Updation successful")
+                return true
+            }
+            else {
+                print("Could not update :(")
+                return false
+            }
+        } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+            print("Update row failed: \(message), in \(String(describing: statement))")
+            return false
+        } catch let error {
+            print("Updation failed: \(error)")
+            return false
+        }
+    }
     
     
     // Delete
