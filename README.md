@@ -13,6 +13,10 @@ Online assessment for TRAM Global. It is a simple CRUD Application to manipulate
 ## Home page with some data
 <img width="221" alt="Screenshot 2023-11-16 at 3 02 29 PM" src="https://github.com/GauravVBhambhani/Tram-Assessment/assets/113461154/c6a9f58a-9bec-4667-9e3a-3516c0cd8988">
 
+## user details in SQLite database
+<img width="873" alt="Screenshot 2023-11-16 at 2 45 24 PM" src="https://github.com/GauravVBhambhani/Tram-Assessment/assets/113461154/72154420-89e7-4507-9246-27aaef267f79">
+
+
 ## Update user page
 <img width="221" alt="Screenshot 2023-11-16 at 3 02 57 PM" src="https://github.com/GauravVBhambhani/Tram-Assessment/assets/113461154/5b2331ab-1d4c-4df4-8075-f3e2fd18b11d">
 
