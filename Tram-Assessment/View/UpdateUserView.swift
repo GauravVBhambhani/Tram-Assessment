@@ -121,7 +121,17 @@ struct UpdateUserView: View {
                     
                     .disabled(email.isEmpty || phone.isEmpty || firstName.isEmpty || lastName.isEmpty)
                     .frame(maxWidth: 360, maxHeight: 50)
-                    .background(LinearGradient(gradient: Gradient(colors: [.blue , .purple]), startPoint: .leading, endPoint: .trailing))
+                    .background(
+                        Group {
+                            if email.isEmpty || phone.isEmpty || firstName.isEmpty || lastName.isEmpty {
+                                RoundedRectangle(cornerRadius: 50)
+                                    .fill(Color.gray)
+                            } else {
+                                RoundedRectangle(cornerRadius: 50)
+                                    .fill(LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .leading, endPoint: .trailing))
+                            }
+                        }
+                    )
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .cornerRadius(50)
