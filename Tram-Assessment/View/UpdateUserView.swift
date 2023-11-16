@@ -26,6 +26,11 @@ struct UpdateUserView: View {
     @State private var email: String
     @State private var phone: String
     
+    // For alert notifications
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var viewModel: UpdateUserViewModel
     
     init(viewModel: UpdateUserViewModel) {
@@ -107,16 +112,21 @@ struct UpdateUserView: View {
                     Spacer()
                     
                     Button("Save") {
-                        viewModel.updateUserDetails(
-                            firstName: firstName,
-                            lastName: lastName,
-                            email: email,
-                            phone: phone,
-                            photo: photo
-                        )
-                        
-                        // Optionally, dismiss the view after saving
-                        dismiss()
+                        if isValidEmail(email) && isValidPhone(phone) {
+                            viewModel.updateUserDetails(
+                                firstName: firstName,
+                                lastName: lastName,
+                                email: email,
+                                phone: phone,
+                                photo: photo
+                            )
+                            
+                            dismiss()
+                        } else {
+                            alertTitle = "Invalid Data"
+                            alertMessage = "Please enter a valid email and phone number."
+                            showAlert = true
+                        }
                     }
                     
                     .disabled(email.isEmpty || phone.isEmpty || firstName.isEmpty || lastName.isEmpty)
@@ -154,7 +164,22 @@ struct UpdateUserView: View {
             }
             .navigationTitle("Update User")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+    
+    func isValidPhone(_ phone: String) -> Bool {
+        let phoneRegex = "[0-9]{10,}"
+        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phonePredicate.evaluate(with: phone)
     }
 }
 

@@ -103,20 +103,35 @@ struct NewUserView: View {
                     
                     Button("Submit") {
                         
-                        let id: Int = 0
-                        let firstName = firstName
-                        let lastName = lastName
-                        let email = email
-                        let phone = phone
-                        let photo = photo
-                        guard let picture = photo?.pngData() else {return}
+                        guard let selectedPhoto = photo else {
+                            // Show an alert for missing photo
+                            alertTitle = "Missing Photo"
+                            alertMessage = "Please select a profile picture."
+                            showAlert = true
+                            return
+                        }
                         
-                        let userValues = User(id: id, picture: picture, firstName: firstName, lastName: lastName, email: email, phone: phone)
-                        //                        dismiss()
-                        
-                        createNewUser(userValues)
-                        
-                        SQLiteQueries.presentRows()
+                        if isValidEmail(email) && isValidPhone(phone) {
+                            let id: Int = 0
+                            let firstName = firstName
+                            let lastName = lastName
+                            let email = email
+                            let phone = phone
+                            let photo = photo
+                            guard let picture = photo?.pngData() else { return }
+                            
+                            let userValues = User(id: id, picture: picture, firstName: firstName, lastName: lastName, email: email, phone: phone)
+                            
+                            createNewUser(userValues)
+                            
+                            //                            SQLiteQueries.presentRows()
+                        } else {
+                            // Show an alert for invalid data
+                            alertTitle = "Invalid Data"
+                            alertMessage = "Please enter valid email and/or phone number."
+                            showAlert = true
+                            return
+                        }
                     }
                     .disabled(email.isEmpty || phone.isEmpty || firstName.isEmpty || lastName.isEmpty)
                     .frame(maxWidth: 360, maxHeight: 50)
@@ -173,9 +188,9 @@ struct NewUserView: View {
         let userAddedToTable = SQLiteQueries.insertRow(userValues)
         
         if userAddedToTable == true {
-//            alertTitle = "Success"
-//            alertMessage = "User added to SQLite successfully!"
-//            showAlert = true
+            //            alertTitle = "Success"
+            //            alertMessage = "User added to SQLite successfully!"
+            //            showAlert = true
             dismiss()
         } else {
             // print("Error: user already exists")
@@ -183,6 +198,18 @@ struct NewUserView: View {
             alertMessage = "User already exists"
             showAlert = true
         }
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+    
+    func isValidPhone(_ phone: String) -> Bool {
+        let phoneRegex = "[0-9]{10,}"
+        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phonePredicate.evaluate(with: phone)
     }
 }
 
